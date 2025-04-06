@@ -1,10 +1,9 @@
 <?php
 
-namespace App\Infrastructure\Handlers;
+namespace App\Application\CommandHandlers;
 
 use App\Application\Commands\CalculateCommissionCommand;
 use App\Application\UseCases\CalculateTransactionCommission;
-use React\Promise\PromiseInterface;
 
 class CalculateCommissionCommandHandler
 {

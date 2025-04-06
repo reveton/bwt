@@ -1,11 +1,12 @@
 <?php
+
 use App\Infrastructure\Services\FileReaderService;
 use DI\ContainerBuilder;
 
 
 $containerBuilder = new ContainerBuilder();
 $containerBuilder->addDefinitions([
-    \App\Infrastructure\Handlers\CalculateCommissionCommandHandler::class => DI\autowire(),
+    \App\Application\CommandHandlers\CalculateCommissionCommandHandler::class => DI\autowire(),
     \App\Application\UseCases\CalculateTransactionCommission::class => DI\autowire(),
     \App\Domain\Interfaces\LineReaderInterface::class => DI\autowire(FileReaderService::class),
     \App\Domain\Interfaces\LineParserInterface::class => DI\autowire(\App\Infrastructure\Services\JsonParserService::class),

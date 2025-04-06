@@ -2,9 +2,9 @@
 
 namespace App\Infrastructure\CLI;
 
+use App\Application\CommandHandlers\CalculateCommissionCommandHandler;
 use App\Application\Commands\CalculateCommissionCommand;
 use App\Domain\Interfaces\ShowResultInterface;
-use App\Infrastructure\Handlers\CalculateCommissionCommandHandler;
 
 class CalculateCommissionCLI
 {
